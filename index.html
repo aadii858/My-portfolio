@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atif Mollah | CSE CYS Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#4f46e5',
+                        'secondary': '#10b981',
+                        'background': '#f9fafb',
+                        'card': '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ensures the Inter font is used and enables smooth scroll */
+        body { 
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Ensures sticky header doesn't cover content when jumping */
+        html { 
+            scroll-padding-top: 5rem; 
+        } 
+        section[id] {
+            scroll-margin-top: 5rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-gray-800 antialiased">
+
+    <!-- Header & Navigation (Sticky) -->
+    <header class="sticky top-0 z-50 bg-card shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-primary">Atif Mollah<span class="text-secondary">.dev</span></h1>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#about" class="text-gray-600 hover:text-primary transition duration-150">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-primary transition duration-150">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-primary transition duration-150">Projects</a>
+                <a href="#contact" class="text-primary font-semibold border-b-2 border-primary">Contact</a>
+            </nav>
+            <!-- AUTH STATUS ELEMENT -->
+            <div id="auth-status" class="text-xs text-gray-500 rounded-full bg-gray-100 px-3 py-1">Loading...</div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- Hero Section -->
+        <section id="hero" class="pt-8 pb-16 text-center md:text-left">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-lg text-secondary font-semibold uppercase tracking-wider">Hello, I'm</span>
+                    <h2 class="mt-2 text-6xl font-extrabold text-gray-900 leading-tight">Atif Mollah</h2>
+                    <p class="mt-4 text-2xl text-primary font-medium">
+                        CSE CYS Student | 2nd Year | Wanna be GDGC member
+                    </p>
+                    <p class="mt-6 text-gray-600 max-w-lg mx-auto md:mx-0">
+                        Passionate about pushing boundaries in technology and contributing to innovation. Currently focusing on web development and cyber security applications.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                        <a href="#projects" class="px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
+                            View Work
+                        </a>
+                        <a href="#contact" class="px-6 py-3 border border-primary text-primary font-semibold rounded-lg hover:bg-indigo-50 transition duration-300">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+                <!-- Image Section -->
+                <div class="hidden md:block">
+                    <!-- Assuming IMG_5620.HEIC is placed in the public/ folder -->
+                    <img
+                        src="IMG_5620.HEIC"
+                        alt="Atif Mollah Professional Profile"
+                        class="w-full h-80 object-cover rounded-xl shadow-2xl"
+                        onerror="this.src='https://placehold.co/600x400/4f46e5/ffffff?text=Image+Unavailable'"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-12">
+            <h3 class="text-4xl font-bold text-gray-900 text-center mb-10 border-b-2 pb-2 border-primary inline-block mx-auto">About Me</h3>
+            <div class="bg-card p-8 md:p-12 rounded-2xl shadow-xl">
+                <p class="text-lg leading-relaxed text-gray-600">
+                    I am a curious and driven individual with a passion for learning and growth. I thrive on new challenges and am always seeking opportunities to expand my knowledge and skills. I’m passionate about building serverless applications and exploring cloud technologies. This portfolio is powered entirely by Firebase — from hosting to functions
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-12">
+            <h3 class="text-4xl font-bold text-gray-900 text-center mb-10 border-b-2 pb-2 border-secondary inline-block mx-auto">Core Skills</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill Card Example -->
+                <div class="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary mx-auto mb-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.316 3.125a.75.75 0 011.06 0l4.5 4.5a.75.75 0 010 1.06l-4.5 4.5a.75.75 0 01-1.06-1.06L15.44 8.25H3.5a.75.75 0 010-1.5h11.94l-3.124-3.125a.75.75 0 010-1.06z" clip-rule="evenodd" /></svg>
+                    <p class="font-semibold text-lg">Web Dev</p>
+                </div>
+                <div class="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary mx-auto mb-3" viewBox="0 0 20 20" fill="currentColor"><path d="M13.5 4.5A.5.5 0 0013 4h-2a.5.5 0 000 1h2a.5.5 0 00.5-.5zM10.5 4a.5.5 0 00-.5.5v1a.5.5 0 001 0v-1a.5.5 0 00-.5-.5zM7.5 4a.5.5 0 00-.5.5v1a.5.5 0 001 0v-1a.5.5 0 00-.5-.5zM4.5 4a.5.5 0 00-.5.5v1a.5.5 0 001 0v-1a.5.5 0 00-.5-.5zM15 13.5A.5.5 0 0114.5 13H5.5a.5.5 0 010 1h9a.5.5 0 01.5-.5zM14.5 10a.5.5 0 000 1h-9a.5.5 0 000-1h9zM15.5 7.5a.5.5 0 01-.5.5h-11a.5.5 0 010-1h11a.5.5 0 01.5.5z" /></svg>
+                    <p class="font-semibold text-lg">Cyber Security</p>
+                </div>
+                <div class="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary mx-auto mb-3" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm2.232 9.232a.5.5 0 01-.707 0l-3.182-3.182a.5.5 0 01.707-.707l3.182 3.182a.5.5 0 010 .707z" /></svg>
+                    <p class="font-semibold text-lg">Python / C / C++</p>
+                </div>
+                <div class="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary mx-auto mb-3" viewBox="0 0 20 20" fill="currentColor"><path d="M10.828 2.232a1 1 0 00-1.656 0l-7 7A1 1 0 003 10h14a1 1 0 00.828-1.536l-7-7zM7.5 16a.5.5 0 000 1h5a.5.5 0 000-1h-5z" /></svg>
+                    <p class="font-semibold text-lg">Cloud (Firebase)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-12">
+            <h3 class="text-4xl font-bold text-gray-900 text-center mb-10 border-b-2 pb-2 border-primary inline-block mx-auto">Featured Projects</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project Card Example -->
+                <div class="bg-card rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/818cf8/ffffff?text=Project+1+Mock" onerror="this.src='https://placehold.co/600x400/818cf8/ffffff?text=Project+1+Mock';" alt="Project 1 Mockup" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900">Secure API Gateway</h4>
+                        <p class="mt-2 text-gray-600 text-sm">Implemented a fully secured REST API gateway using Node.js and JWT for authentication, focusing on preventing common injection attacks.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs font-medium bg-secondary/10 text-secondary px-3 py-1 rounded-full">Node.js</span>
+                            <span class="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">Security</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card Example 2 -->
+                <div class="bg-card rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/34d399/ffffff?text=Project+2+Mock" onerror="this.src='https://placehold.co/600x400/34d399/ffffff?text=Project+2+Mock';" alt="Project 2 Mockup" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900">Real-time Chat App</h4>
+                        <p class="mt-2 text-gray-600 text-sm">Developed a multi-user chat application using React and Firebase Firestore, focusing on real-time data synchronization and UI responsiveness.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs font-medium bg-secondary/10 text-secondary px-3 py-1 rounded-full">React</span>
+                            <span class="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">Firestore</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card Example 3 -->
+                <div class="bg-card rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/fcd34d/1f2937?text=Project+3+Mock" onerror="this.src='https://placehold.co/600x400/fcd34d/1f2937?text=Project+3+Mock';" alt="Project 3 Mockup" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900">Penetration Testing Utility</h4>
+                        <p class="mt-2 text-gray-600 text-sm">A Python-based suite of tools for network mapping and vulnerability scanning, designed for ethical hacking practice.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs font-medium bg-secondary/10 text-secondary px-3 py-1 rounded-full">Python</span>
+                            <span class="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">CyberSec</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12">
+            <h3 class="text-4xl font-bold text-gray-900 text-center mb-10 border-b-2 pb-2 border-primary inline-block mx-auto">Get In Touch</h3>
+            <div class="max-w-xl mx-auto bg-card p-8 md:p-10 rounded-2xl shadow-2xl">
+                <p class="text-center text-gray-600 mb-6">Have a project idea or just want to chat? Send me a message!</p>
+
+                <!-- Contact Form -->
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary"></textarea>
+                    </div>
+
+                    <!-- Submission Status Message Box -->
+                    <div id="status-message" class="hidden p-4 rounded-lg text-sm transition duration-300 ease-in-out" role="alert"></div>
+
+                    <div>
+                        <button type="submit" id="submit-button" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-white bg-secondary hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary transition duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="text-center mt-4 text-xs text-gray-400">
+                <span id="firestore-info"></span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Atif Mollah. All rights reserved.</p>
+            <p class="mt-2 text-sm text-gray-400">Built with passion and persistence in CSE CYS.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDKs and Authentication Logic -->
+    <script type="module">
+        // --- Firebase Imports ---
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
+
+        // Set log level to debug for better error tracking
+        setLogLevel('Debug');
+        
+        // --- START: CONFIGURATION WITH PLACEHOLDERS ---
+        // !!! IMPORTANT: REPLACE ALL "PASTE_YOUR_..." VALUES WITH YOUR NEW, RESTRICTED KEY/PROJECT INFO
+        const firebaseConfig = {
+            apiKey: "PASTE_YOUR_NEW_API_KEY_HERE", 
+            authDomain: "atif-mollah-portfolio.firebaseapp.com",
+            projectId: "atif-mollah-portfolio",
+            storageBucket: "atif-mollah-portfolio.firebasestorage.app",
+            messagingSenderId: "1081054226335",
+            appId: "1:1081054226335:web:764a66861e3c5017e8ffaa",
+            measurementId: "G-JGCDD8KJ1J"
+        };
+        // Define necessary script variables
+        const appId = "atif-mollah-portfolio-live";
+        let db = null;
+        let auth = null;
+        let userId = null;
+        // --- END: CONFIGURATION ---
+
+        // UI elements
+        const authStatusEl = document.getElementById('auth-status');
+        const statusMessageEl = document.getElementById('status-message');
+        const firestoreInfoEl = document.getElementById('firestore-info');
+        const submitButtonEl = document.getElementById('submit-button');
+
+        /**
+         * Initializes Firebase services and authenticates the user.
+         */
+        async function initializeFirebase() {
+            try {
+                // Initialize Firebase App
+                const app = initializeApp(firebaseConfig);
+                getAnalytics(app); // Initialize Analytics
+                
+                // Get database and auth instances from the initialized app
+                db = getFirestore(app);
+                auth = getAuth(app);
+
+                // --- AUTHENTICATION: Anonymous sign-in for the contact form permissions ---
+                const userCredential = await signInAnonymously(auth);
+                userId = userCredential.user.uid;
+
+                // Update UI to show successful authentication
+                authStatusEl.textContent = `User: ${userId.substring(0, 8)}...`;
+                authStatusEl.classList.replace('bg-gray-100', 'bg-green-100');
+                authStatusEl.classList.replace('text-gray-500', 'text-green-800');
+                
+                console.log("Signed in anonymously. User ID:", userId);
+                
+                // Display database path information (for debugging/context)
+                const collectionPath = `artifacts/${appId}/users/${userId}/portfolio_contacts`;
+                firestoreInfoEl.textContent = `Submissions save to: /users/{userId}/portfolio_contacts`;
+
+                // Attach form submission listener once authenticated
+                document.getElementById('contact-form').addEventListener('submit', handleFormSubmission);
+
+            } catch (error) {
+                console.error("Firebase Initialization or Auth Failed:", error);
+                
+                // If initialization fails, show a permanent error status
+                authStatusEl.textContent = "Auth Failed";
+                authStatusEl.classList.replace('bg-gray-100', 'bg-red-600');
+                authStatusEl.classList.add('text-white');
+            }
+        }
+
+        /**
+         * Converts error into a formatted status message.
+         */
+        function showStatusMessage(message, type) {
+            statusMessageEl.textContent = message;
+            statusMessageEl.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800', 'bg-red-600', 'text-white');
+            
+            if (type === 'success') {
+                statusMessageEl.classList.add('bg-green-100', 'text-green-800');
+            } else if (type === 'error') {
+                statusMessageEl.classList.add('bg-red-100', 'text-red-800');
+            }
+            statusMessageEl.classList.remove('hidden');
+            // Hide message after 5 seconds
+            setTimeout(() => { statusMessageEl.classList.add('hidden'); }, 5000);
+        }
+
+        /**
+         * Handles the contact form submission, saving data to Firestore.
+         */
+        async function handleFormSubmission(e) {
+            e.preventDefault();
+
+            if (!db || !userId) {
+                showStatusMessage("Database not ready. Please refresh the page.", 'error');
+                return;
+            }
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                showStatusMessage("All fields are required.", 'error');
+                return;
+            }
+
+            submitButtonEl.disabled = true;
+            submitButtonEl.textContent = "Sending...";
+            submitButtonEl.classList.add('opacity-50');
+            statusMessageEl.classList.add('hidden'); // Hide previous status
+
+            const submissionData = {
+                name: name,
+                email: email,
+                message: message,
+                receivedAt: new Date().toISOString(),
+                userId: userId,
+            };
+
+            // CRITICAL: Construct the full, correct path matching the security rule:
+            const collectionPath = `artifacts/${appId}/users/${userId}/portfolio_contacts`;
+            const contactCollectionRef = collection(db, collectionPath);
+
+            try {
+                // Use addDoc to automatically generate a new document ID
+                await addDoc(contactCollectionRef, submissionData);
+
+                showStatusMessage("Message sent successfully! I'll be in touch soon.", 'success');
+
+                // Clear the form
+                document.getElementById('contact-form').reset();
+
+            } catch (error) {
+                console.error("Error writing document to Firestore: ", error);
+                
+                if (error.code === 'permission-denied') {
+                     showStatusMessage("Failed: Permission Denied. Check Firestore Rules.", 'error');
+                } else {
+                     showStatusMessage(`Failed to send message: ${error.message}`, 'error');
+                }
+            } finally {
+                submitButtonEl.disabled = false;
+                submitButtonEl.textContent = "Send Message";
+                submitButtonEl.classList.remove('opacity-50');
+            }
+        }
+
+        // Start the application setup
+        initializeFirebase();
+
+    </script>
+</body>
+</html>

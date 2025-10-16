@@ -1,0 +1,19 @@
+# Dependency directories
+# These are generated locally and should never be committed.
+node_modules/
+functions/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Firebase/Google Cloud specific files
+# These files contain local configurations, debug logs, and secrets.
+.env
+.firebase/
+firebase-debug.log
+.firebaserc          # Local config for project aliases
+/functions/.runtimeconfig.json  # Contains function environment variables/secrets
+
+# Build and temporary files
+/dist/
+/out/
+.DS_Store
